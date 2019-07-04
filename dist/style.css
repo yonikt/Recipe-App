@@ -2,10 +2,10 @@
 #container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-areas: "a b c ." "d e f ." ". . . .";
+	grid-auto-columns: 12px;
 	grid-gap: 12px;
 	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   
@@ -13,19 +13,26 @@
 
 .display{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: inline-block;
   }
 
 
 #button{
 		transition-duration: 0.4s;
-	  }
-	  
-	  #button:hover {
-		background-color: #4CAF50; 
+		background-color: #4CAF50;
+		border: none;
 		color: white;
+		padding: 16px 32px;
+		text-decoration: none;
+		margin: 4px 2px;
+		cursor: pointer;
 	  }
 
+	  #ingredient{
+		background-color: white;
+		height: 40px;
+	  }
+	  
+	
 
 
 /* animation */
@@ -34,7 +41,7 @@
 	width: 100wh;
 	height: 90vh;
 	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background: linear-gradient(-45deg,  #23A6D5, #23D5AB);
 	background-size: 4000% 4000%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
