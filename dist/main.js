@@ -1,27 +1,14 @@
-const getRecipe=function(){
+const renderer=new Renderer
 
-const value = $('#ingredient').val()
 
-    $.ajax({
+$('#button').on('click', function(){
+    renderer.render()
+})
 
-        url: `/recipes/${value}`,
-        dataType: 'json',
-        success: function(result) {
-            for(let i=0; i<result.length; i++){
-           $('#container').append(`<div>${result[i].title}</div>`)
-            }
-        }
-    })
+$('body').on('click', '.image', function(){
     
+})
 
-
-}
-
-
-
-
-
-$('#button').on('click',getRecipe)
 
        
 
